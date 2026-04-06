@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#08090b">
+<meta name="supported-color-schemes" content="dark">
+<title>Jon Guidroz</title>
+<meta name="description" content="Independent advisory practice — energy and AI infrastructure strategy. Board seats, advisory roles, and thinking partnerships.">
+<meta property="og:title" content="Jon Guidroz">
+<meta property="og:description" content="Independent advisory practice — energy and AI infrastructure strategy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://projectgreenbelt.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,200;9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+--void: #08090b;
+--void-2: #0e1014;
+--void-3: #14171c;
+--paper: #e8e5d9;
+--paper-dim: #8a8578;
+--paper-faint: #4d4a42;
+--amber: #d4a05a;
+--amber-bright: #e8b866;
+--amber-deep: #8a5e28;
+--rule: #22252b;
+--rule-bright: #3a3e48;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; forced-color-adjust: none; -webkit-forced-color-adjust: none; }
+html { scroll-behavior: smooth; color-scheme: dark only; background: #08090b; }
+body { background: #08090b !important; color: #e8e5d9 !important; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.6; font-weight: 400; overflow-x: hidden; -webkit-font-smoothing: antialiased; position: relative; forced-color-adjust: none; }
+h1, h2, h3, h4, p, span, li, div, a, ul, section { forced-color-adjust: none !important; }
+h1, h2, h3 { color: #e8e5d9 !important; }
+p { color: #e8e5d9 !important; }
+.accent, .em, .heavy { color: #d4a05a !important; }
+#network { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+body::before { content: ''; position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.12; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); mix-blend-mode: overlay; }
+main { position: relative; z-index: 2; }
+.container { max-width: 1180px; margin: 0 auto; padding: 0 2.5rem; }
+.progress { position: fixed; top: 0; left: 0; height: 1px; background: var(--amber); width: 0%; z-index: 100; box-shadow: 0 0 8px var(--amber); }
+nav { position: fixed; top: 0; left: 0; right: 0; padding: 1.8rem 2.5rem; display: flex; justify-content: space-between; align-items: center; z-index: 50; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; mix-blend-mode: difference; }
+nav .brand { color: var(--paper); font-weight: 500; }
+nav .coords { color: var(--paper-dim); display: flex; gap: 2rem; }
+a { color: var(--amber); text-decoration: none; transition: color 0.3s ease; position: relative; }
+a::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1px; background: var(--amber); transform: scaleX(0); transform-origin: left; transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1); }
+a:hover::after { transform: scaleX(1); }
+.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 8rem 2.5rem 6rem; position: relative; }
+.hero-inner { max-width: 1180px; margin: 0 auto; width: 100%; }
+.hero-mark { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 4rem; opacity: 0; animation: fadeIn 1.2s ease-out 0.4s forwards; }
+.hero-mark .line { width: 3rem; height: 1px; background: var(--amber); }
+.hero-mark .label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber); }
+.hero h1 { font-family: 'Fraunces', Georgia, serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: clamp(4rem, 13vw, 11rem); font-weight: 300; line-height: 0.88; letter-spacing: -0.04em; margin-bottom: 3rem; color: var(--paper); }
+.hero h1 .char { display: inline-block; opacity: 0; transform: translateY(60px); animation: charRise 1s cubic-bezier(0.19, 1, 0.22, 1) forwards; }
+.hero h1 .line-2 { display: block; font-weight: 600; }
+.hero-divider { width: 100%; height: 1px; background: linear-gradient(to right, var(--rule-bright), transparent); margin: 3rem 0; opacity: 0; animation: expandWidth 1.5s ease-out 1.8s forwards; transform-origin: left; }
+.hero-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; opacity: 0; animation: fadeIn 1.4s ease-out 2.1s forwards; }
+.hero-statement { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: clamp(1.3rem, 2vw, 1.65rem); line-height: 1.35; color: var(--paper); font-weight: 300; max-width: 540px; }
+.hero-coords { display: grid; gap: 1.2rem; justify-self: end; text-align: right; }
+.coord-row { display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: baseline; }
+.coord-label { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--paper-dim); }
+.coord-value { font-size: 0.9rem; color: var(--paper); font-weight: 400; }
+section { padding: 10rem 0; position: relative; }
+.section-head { display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; margin-bottom: 5rem; align-items: start; }
+.section-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); padding-top: 1.5rem; border-top: 1px solid var(--rule-bright); }
+.section-meta .num { display: block; color: var(--paper-dim); font-size: 0.65rem; margin-bottom: 0.4rem; }
+h2 { font-family: 'Fraunces', Georgia, serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: clamp(2.2rem, 5.5vw, 4.2rem); line-height: 1; letter-spacing: -0.03em; font-weight: 300; color: var(--paper); }
+h2 .heavy { font-weight: 600; }
+.prose { max-width: 680px; margin-left: calc(25% + 1rem); }
+.prose p { font-size: 1.08rem; line-height: 1.65; margin-bottom: 1.4rem; color: var(--paper); }
+.prose p.lead { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-weight: 300; font-size: 1.5rem; line-height: 1.4; color: var(--paper); margin-bottom: 2rem; }
+.prose .accent { color: var(--amber); font-weight: 500; }
+.manifesto { padding: 14rem 0; position: relative; background: linear-gradient(to bottom, transparent, var(--void-2) 20%, var(--void-2) 80%, transparent); }
+.manifesto-inner { max-width: 1000px; margin: 0 auto; padding: 0 2.5rem; }
+.manifesto-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber); margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1rem; }
+.manifesto-label::before, .manifesto-label::after { content: ''; flex: 1; height: 1px; background: var(--rule-bright); }
+.manifesto-text { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: clamp(1.8rem, 4.2vw, 3.2rem); line-height: 1.15; font-weight: 300; color: var(--paper); text-align: center; letter-spacing: -0.02em; }
+.manifesto-text .em { color: var(--amber); font-weight: 500; }
+.manifesto-attribution { display: block; text-align: center; margin-top: 3rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--paper-dim); }
+.ops { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 0; border: 1px solid var(--rule-bright); margin-top: 4rem; background: rgba(14, 16, 20, 0.7); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.ops-col { padding: 3rem; position: relative; }
+.ops-col.yes { border-right: 1px solid var(--rule-bright); }
+.ops-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+.ops-head .key { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; }
+.ops-col.yes .ops-head .key { color: var(--amber); }
+.ops-col.no .ops-head .key { color: var(--paper-dim); }
+.ops-head .count { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--paper-faint); }
+.ops-list { list-style: none; counter-reset: item; }
+.ops-list li { counter-increment: item; padding: 1.1rem 0; border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; font-size: 0.98rem; line-height: 1.5; color: var(--paper); transition: color 0.3s ease, transform 0.3s ease; }
+.ops-list li:last-child { border-bottom: none; }
+.ops-list li::before { content: counter(item, decimal-leading-zero); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--paper-faint); padding-top: 0.25rem; }
+.ops-col.yes .ops-list li:hover { color: var(--amber-bright); transform: translateX(4px); }
+.ops-col.no .ops-list li { color: var(--paper-dim); }
+.ops-col.no .ops-list li:hover { color: var(--paper); }
+.record { margin-top: 2rem; border-top: 1px solid var(--rule-bright); }
+.record-item { display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; padding: 3.5rem 0; border-bottom: 1px solid var(--rule-bright); transition: background 0.4s ease; }
+.record-item:hover { background: rgba(212, 160, 90, 0.03); }
+.record-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--paper-dim); }
+.record-meta .status { display: inline-block; padding: 0.3rem 0.6rem; border: 1px solid var(--amber); color: var(--amber); margin-bottom: 0.8rem; font-size: 0.65rem; }
+.record-meta .dates { display: block; margin-top: 0.3rem; color: var(--paper-faint); }
+.record-content h3 { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: 1.8rem; font-weight: 400; line-height: 1.2; color: var(--paper); margin-bottom: 0.4rem; letter-spacing: -0.01em; }
+.record-content .org { display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--amber); margin-bottom: 1.5rem; }
+.record-content p { color: var(--paper); opacity: 0.85; font-size: 1rem; line-height: 1.65; max-width: 640px; }
+.learned { background: var(--void-2); position: relative; }
+.learned::before, .learned::after { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: var(--rule-bright); }
+.learned::before { top: 0; }
+.learned::after { bottom: 0; }
+.notes { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 4rem; border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
+.note { padding: 3rem; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); transition: background 0.4s ease; }
+.note:hover { background: rgba(212, 160, 90, 0.04); }
+.note .num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--amber); margin-bottom: 1.2rem; display: block; }
+.note p { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: 1.25rem; line-height: 1.4; color: var(--paper); font-weight: 300; }
+.note p .em { font-weight: 500; color: var(--amber-bright); }
+.closing { padding: 14rem 0 10rem; text-align: center; }
+.closing-text { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1; font-weight: 300; letter-spacing: -0.03em; color: var(--paper); }
+.closing-text .break { display: block; font-weight: 600; color: var(--amber); margin-top: 0.5rem; }
+.closing-sub { margin-top: 3rem; font-size: 1rem; color: var(--paper-dim); max-width: 520px; margin-left: auto; margin-right: auto; }
+.contact { padding: 8rem 0 6rem; border-top: 1px solid var(--rule-bright); background: var(--void); }
+.contact-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; align-items: start; }
+.contact-brand .display-name { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: 2rem; font-weight: 400; color: var(--paper); margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+.contact-brand .tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--paper-dim); }
+.contact-col h4 { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 1.2rem; font-weight: 500; }
+.contact-col a { display: block; font-size: 0.92rem; color: var(--paper); margin-bottom: 0.5rem; }
+.statusbar { border-top: 1px solid var(--rule); background: var(--void); padding: 1.4rem 2.5rem; display: grid; grid-template-columns: auto 1fr auto auto auto; gap: 2.5rem; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--paper-dim); }
+.statusbar .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--amber); margin-right: 0.6rem; box-shadow: 0 0 8px var(--amber); animation: pulse 2.4s ease-in-out infinite; vertical-align: middle; }
+.statusbar .live { color: var(--amber); }
+.statusbar .sep { color: var(--paper-faint); }
+.statusbar .label { color: var(--paper-faint); }
+.statusbar .value { color: var(--paper); }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+.marquee { overflow: hidden; border-top: 1px solid var(--rule-bright); border-bottom: 1px solid var(--rule-bright); padding: 2.2rem 0; background: var(--void); position: relative; z-index: 3; }
+.marquee-track { display: flex; width: max-content; animation: marquee 60s linear infinite; will-change: transform; }
+.marquee-track span { font-family: 'Fraunces', Georgia, serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 300; color: var(--paper); padding: 0 2rem; letter-spacing: -0.02em; white-space: nowrap; }
+.marquee-track .dot { color: var(--amber); padding: 0 1rem; font-weight: 600; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes charRise { to { opacity: 1; transform: translateY(0); } }
+@keyframes expandWidth { from { opacity: 0; transform: scaleX(0); } to { opacity: 1; transform: scaleX(1); } }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1), transform 1.2s cubic-bezier(0.19, 1, 0.22, 1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-1 { transition-delay: 0.1s; }
+.reveal-2 { transition-delay: 0.25s; }
+.reveal-3 { transition-delay: 0.4s; }
+@media (max-width: 860px) {
+.container { padding: 0 1.5rem; }
+nav { padding: 1.5rem; }
+nav .coords { gap: 1rem; }
+nav .coords span:nth-child(2) { display: none; }
+.hero { padding: 7rem 1.5rem 4rem; }
+.hero-bottom { grid-template-columns: 1fr; gap: 2.5rem; }
+.hero-coords { justify-self: start; text-align: left; }
+section { padding: 6rem 0; }
+.manifesto { padding: 9rem 0; }
+.closing { padding: 9rem 0 6rem; }
+.section-head { grid-template-columns: 1fr; gap: 1.5rem; }
+.prose { margin-left: 0; }
+.ops { grid-template-columns: 1fr; }
+.ops-col.yes { border-right: none; border-bottom: 1px solid var(--rule-bright); }
+.ops-col { padding: 2rem; }
+.record-item { grid-template-columns: 1fr; gap: 1.5rem; padding: 2.5rem 0; }
+.notes { grid-template-columns: 1fr; }
+.note { padding: 2rem; }
+.contact-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+.contact-brand { grid-column: 1 / -1; }
+.statusbar { grid-template-columns: auto 1fr auto; }
+.statusbar span:nth-child(4) { display: none; }
+}
+</style>
+</head>
+<body>
+<canvas id="network"></canvas>
+<div class="progress" id="progress"></div>
+<nav>
+<div class="brand">JG / ATX</div>
+<div class="coords">
+<span>30.2672° N</span>
+<span>97.7431° W</span>
+<span id="time">—</span>
+</div>
+</nav>
+<main>
+<section class="hero">
+<div class="hero-inner">
+<div class="hero-mark">
+<span class="line"></span>
+<span class="label">Strategist. Writer.</span>
+</div>
+<h1 id="hero-title"></h1>
+<div class="hero-divider"></div>
+<div class="hero-bottom">
+<p class="hero-statement">Twenty years in energy and tech strategy at Amazon, Google, and Microsoft. Now running an independent practice: a small portfolio of advisory and board work in advanced energy and AI infrastructure.</p>
+<div class="hero-coords">
+<div class="coord-row">
+<span class="coord-label">Practice</span>
+<span class="coord-value">Independent Advisory</span>
+</div>
+<div class="coord-row">
+<span class="coord-label">Current</span>
+<span class="coord-value">Aalo · Hanwha · Atomic Canyon</span>
+</div>
+<div class="coord-row">
+<span class="coord-label">Status</span>
+<span class="coord-value">Selectively engaged</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-head reveal">
+<div class="section-meta"><span class="num">§ 01</span>The Ground</div>
+<h2>Who I am <span class="heavy">now.</span></h2>
+</div>
+<div class="prose">
+<p class="lead reveal reveal-1">For about twenty years I worked in energy strategy and business development at Amazon, Google, and Microsoft. I led teams. I negotiated deals. I spent a lot of time thinking about how the biggest companies in the world should approach power and infrastructure.</p>
+<p class="reveal reveal-2">I was good at it. I still am. These days I run an independent practice and I am choosier about what I take on.</p>
+<p class="reveal reveal-2">My current portfolio is small and intentional. I'm SVP of Commercialization at <a href="https://www.aalo.com">Aalo Atomics</a>, an advanced nuclear company building modular reactors aimed at the AI data center buildout. I'm a strategic consultant to Hanwha Group and QCells, advising on U.S. solar manufacturing, battery storage, and how a global industrial conglomerate fits into a fast-changing power market. And I sit on the advisory board of Atomic Canyon, which is applying frontier AI to commercial nuclear plant operations.</p>
+<p class="reveal reveal-3">In between the client work I write. I think a lot about what I have started calling the <span class="accent">translation gap</span>: the place where deep technology dies, not because the science was wrong, but because the founders and the buyers couldn't talk to each other. It's the most interesting problem I know.</p>
+<p class="reveal reveal-3">I'm open to additional board seats and advisory roles where the people are good and the work is real. The good ones tend to come through introductions from people I already trust. If that sounds like you, the door is open.</p>
+</div>
+</div>
+</section>
+<section class="manifesto">
+<div class="manifesto-inner">
+<div class="manifesto-label reveal">On the method</div>
+<p class="manifesto-text reveal reveal-1">Intrinsically complete.<br>Untouched by the <span class="em">disease of effort</span>.<br>Nothing to be done.</p>
+<span class="manifesto-attribution reveal reveal-2">James Lowe</span>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-head reveal">
+<div class="section-meta"><span class="num">§ 02</span>Operating Parameters</div>
+<h2>What I say <span class="heavy">yes</span> to.<br>What I say <span class="heavy">no</span> to.</h2>
+</div>
+<div class="ops reveal reveal-1">
+<div class="ops-col yes">
+<div class="ops-head"><span class="key">+ Accept</span><span class="count">06 / ITEMS</span></div>
+<ul class="ops-list">
+<li>Strategic questions where pattern recognition matters more than execution speed</li>
+<li>Thesis development, market analysis, and adversarial stress tests of ideas you already love</li>
+<li>Translating between disciplines, industries, and groups that don't naturally talk to each other</li>
+<li>Conversations where both of us leave thinking differently than we walked in</li>
+<li>Founders wrestling with the gap between what they're building and who they want to be</li>
+<li>Engagements with a defined start, a defined end, and a clear thing being delivered</li>
+</ul>
+</div>
+<div class="ops-col no">
+<div class="ops-head"><span class="key">− Decline</span><span class="count">06 / ITEMS</span></div>
+<ul class="ops-list">
+<li>Operational roles, full time or fractional. I am not looking for a job.</li>
+<li>Open-ended advisory without a scope or a clock</li>
+<li>Engagements that quietly expand past what we agreed to</li>
+<li>"Quick calls" that turn out to be discovery sessions for something much bigger</li>
+<li>Opportunities whose main appeal is the title, the prestige, or who they would let me become</li>
+<li>Anything where my honest answer is "I could do this" instead of "I want to"</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="manifesto">
+<div class="manifesto-inner">
+<p class="manifesto-text reveal">My default is <span class="em">no</span>.<br>I've gotten comfortable with that.</p>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-head reveal">
+<div class="section-meta"><span class="num">§ 03</span>The Record</div>
+<h2>What I've <span class="heavy">done.</span></h2>
+</div>
+<div class="record">
+<div class="record-item reveal">
+<div class="record-meta"><span class="status">Active</span><br>Current Engagement<span class="dates">Dec 2024 — Present</span></div>
+<div class="record-content">
+<h3>SVP of Commercialization</h3>
+<span class="org">Aalo Atomics / Austin, TX</span>
+<p>Strategic counsel on commercial positioning, partnerships, and the path to revenue for one of the most ambitious advanced nuclear companies in the country. Aalo builds mass-manufactured sodium-cooled reactors aimed at the AI data center buildout. I help the team think clearly about market entry, financing structures, and how to tell the story.</p>
+</div>
+</div>
+<div class="record-item reveal">
+<div class="record-meta"><span class="status">Active</span><br>Strategic Consulting<span class="dates">2025 — Present</span></div>
+<div class="record-content">
+<h3>Strategic Consultant</h3>
+<span class="org">Hanwha Group / QCells</span>
+<p>Independent advisory to one of the largest industrial conglomerates in the world on U.S. solar manufacturing strategy, battery storage, and virtual power plants. Helping the team think through how its American businesses fit into a rapidly changing power market and where the real commercial leverage sits.</p>
+</div>
+</div>
+<div class="record-item reveal">
+<div class="record-meta"><span class="status">Active</span><br>Advisory Board<span class="dates">2024 — Present</span></div>
+<div class="record-content">
+<h3>Advisory Board Member</h3>
+<span class="org">Atomic Canyon</span>
+<p>Atomic Canyon is applying frontier AI to commercial nuclear plant operations, starting with the regulatory and compliance documentation that slows every reactor project down. Their first deployment was the first commercial generative AI tool at a U.S. nuclear plant. I advise on commercial strategy, partnerships, and market positioning.</p>
+</div>
+</div>
+<div class="record-item reveal">
+<div class="record-meta">Solo Founder<span class="dates">2023 — Present</span></div>
+<div class="record-content">
+<h3>Greenbelt · ScaleOS · Lumen</h3>
+<span class="org">AI-Native Platforms</span>
+<p>Three AI-native platforms shipped as a solo, non-technical founder. Greenbelt is a venture intelligence platform built around the idea that AI sycophancy is an architectural problem you can solve with structural opposition. ScaleOS is a commercialization readiness engine for deep tech. Lumen is an off-market residential real estate intelligence platform. They taught me a lot about product-market fit. They also taught me about my own relationship with building, which turned out to be the more useful lesson.</p>
+</div>
+</div>
+<div class="record-item reveal">
+<div class="record-meta">Previous<span class="dates">Amazon / Google / Microsoft</span></div>
+<div class="record-content">
+<h3>Senior Energy Strategy &amp; Business Development</h3>
+<span class="org">Hyperscale Technology</span>
+<p>Led energy procurement, infrastructure strategy, and commercial partnerships at the largest technology companies in the world. Helped shape how these organizations think about power, sustainability, and where energy markets meet technology platforms. At Microsoft I led global energy commercialization, launched products built on open-source energy consortia, and ran the Schneider Electric innovation alliance.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="marquee">
+<div class="marquee-track">
+<span>Independent practice.</span><span class="dot">✦</span><span>No is a complete sentence.</span><span class="dot">✦</span><span>Choosy, not hungry.</span><span class="dot">✦</span><span>Open to the right boards.</span><span class="dot">✦</span><span>Independent practice.</span><span class="dot">✦</span><span>No is a complete sentence.</span><span class="dot">✦</span><span>Choosy, not hungry.</span><span class="dot">✦</span><span>Open to the right boards.</span><span class="dot">✦</span>
+</div>
+</div>
+<section class="learned">
+<div class="container">
+<div class="section-head reveal">
+<div class="section-meta"><span class="num">§ 04</span>Field Notes</div>
+<h2>Six things I have learned the <span class="heavy">hard way.</span></h2>
+</div>
+<div class="notes">
+<div class="note reveal"><span class="num">N.01</span><p>I'm drawn to building things. That can be <span class="em">a trap</span>.</p></div>
+<div class="note reveal reveal-1"><span class="num">N.02</span><p>The feeling of significance you get from operating at a high level is real. It's also <span class="em">temporary</span>. And it isn't actually the thing I'm after.</p></div>
+<div class="note reveal"><span class="num">N.03</span><p>I consistently <span class="em">underestimate</span> how much time and energy a new commitment is going to take. I am working on this.</p></div>
+<div class="note reveal reveal-1"><span class="num">N.04</span><p>Saying yes to something interesting is the easiest thing in the world. Saying <span class="em">no with love</span> is harder, and I'm still learning.</p></div>
+<div class="note reveal"><span class="num">N.05</span><p>My best work has always come from <span class="em">real curiosity</span>, not from ambition. I keep forgetting this and then remembering it.</p></div>
+<div class="note reveal reveal-1"><span class="num">N.06</span><p>Being a present father and husband is harder than any strategy work I have ever done. It is also the only work that <span class="em">has ever really mattered</span>.</p></div>
+</div>
+</div>
+</section>
+<section class="closing">
+<div class="container">
+<p class="closing-text reveal">I'm not hungry.<span class="break">I'm choosy.</span></p>
+<p class="closing-sub reveal reveal-1">If you are looking for a board member, an advisor, or a thinking partner on something hard in energy or AI infrastructure, I would love to hear from you. If you are looking to hire someone full time, I'm not your guy.</p>
+</div>
+</section>
+<section class="contact">
+<div class="container">
+<div class="contact-grid">
+<div class="contact-brand">
+<div class="display-name">Jon Guidroz</div>
+<div class="tag">Austin · Texas · 30.27°N</div>
+</div>
+<div class="contact-col"><h4>Direct</h4><a href="mailto:jguidroz@gmail.com">email →</a></div>
+<div class="contact-col"><h4>Network</h4><a href="https://www.linkedin.com/in/jonguidroz/">linkedin →</a></div>
+<div class="contact-col"><h4>Current</h4><a href="https://www.aalo.com">aalo.com →</a></div>
+</div>
+</div>
+</section>
+</main>
+<div class="statusbar">
+<span class="live"><span class="dot"></span>SELECTIVELY ENGAGED</span>
+<span></span>
+<span><span class="label">Loc /</span> <span class="value">Austin TX</span></span>
+<span><span class="label">Local /</span> <span class="value" id="time-2">—</span></span>
+<span class="sep">© MMXXVI</span>
+</div>
+<script>
+const heroTitle=document.getElementById('hero-title');
+[{text:'Less,',class:''},{text:'better.',class:'line-2'}].forEach((line,li)=>{const s=document.createElement('span');if(line.class)s.className=line.class;line.text.split('').forEach((c,i)=>{const cs=document.createElement('span');cs.className='char';cs.textContent=c===' '?'\u00A0':c;cs.style.animationDelay=`${0.7+li*0.4+i*0.04}s`;s.appendChild(cs)});heroTitle.appendChild(s)});
+const progress=document.getElementById('progress');
+window.addEventListener('scroll',()=>{progress.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100+'%'});
+const reveals=document.querySelectorAll('.reveal');
+const observer=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')})},{threshold:0.12,rootMargin:'0px 0px -60px 0px'});
+reveals.forEach(el=>observer.observe(el));
+function updateTime(){const n=new Date();const f=n.toLocaleTimeString('en-US',{timeZone:'America/Chicago',hour:'2-digit',minute:'2-digit',hour12:false})+' CT';document.getElementById('time').textContent=f;const t2=document.getElementById('time-2');if(t2)t2.textContent=f}
+updateTime();setInterval(updateTime,1000);
+const canvas=document.getElementById('network'),ctx=canvas.getContext('2d');let nodes=[],mouse={x:null,y:null,radius:180};
+function resize(){const d=window.devicePixelRatio||1;canvas.width=window.innerWidth*d;canvas.height=window.innerHeight*d;canvas.style.width=window.innerWidth+'px';canvas.style.height=window.innerHeight+'px';ctx.setTransform(1,0,0,1,0,0);ctx.scale(d,d)}
+class Node{constructor(){this.x=Math.random()*window.innerWidth;this.y=Math.random()*window.innerHeight;this.vx=(Math.random()-0.5)*0.25;this.vy=(Math.random()-0.5)*0.25;this.radius=Math.random()*1.4+0.4;this.pulse=Math.random()*Math.PI*2;this.pulseSpeed=0.008+Math.random()*0.01}
+update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>window.innerWidth)this.vx*=-1;if(this.y<0||this.y>window.innerHeight)this.vy*=-1;if(mouse.x!==null){const dx=mouse.x-this.x,dy=mouse.y-this.y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<mouse.radius&&dist>0){const f=(mouse.radius-dist)/mouse.radius;this.x+=(dx/dist)*f*0.4;this.y+=(dy/dist)*f*0.4}}this.pulse+=this.pulseSpeed}
+draw(){const g=Math.sin(this.pulse)*0.4+0.6;const gr=ctx.createRadialGradient(this.x,this.y,0,this.x,this.y,this.radius*6);gr.addColorStop(0,`rgba(212,160,90,${g*0.3})`);gr.addColorStop(1,'rgba(212,160,90,0)');ctx.fillStyle=gr;ctx.beginPath();ctx.arc(this.x,this.y,this.radius*6,0,Math.PI*2);ctx.fill();ctx.beginPath();ctx.arc(this.x,this.y,this.radius,0,Math.PI*2);ctx.fillStyle=`rgba(232,184,102,${g})`;ctx.fill()}}
+function init(){nodes=[];const c=Math.min(Math.floor((window.innerWidth*window.innerHeight)/14000),120);for(let i=0;i<c;i++)nodes.push(new Node())}
+function connect(){const m=150;for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){const dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<m){const a=(1-d/m)*0.22;ctx.strokeStyle=`rgba(212,160,90,${a})`;ctx.lineWidth=0.4;ctx.beginPath();ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);ctx.stroke()}}}
+function animate(){ctx.clearRect(0,0,window.innerWidth,window.innerHeight);nodes.forEach(n=>{n.update();n.draw()});connect();requestAnimationFrame(animate)}
+window.addEventListener('resize',()=>{resize();init()});
+window.addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});
+window.addEventListener('mouseleave',()=>{mouse.x=null;mouse.y=null});
+resize();init();animate();
+</script>
+</body>
+</html>
