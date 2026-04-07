@@ -105,6 +105,13 @@ h2 .heavy { font-weight: 600; }
 .record-content p { color: var(--paper); opacity: 0.85; font-size: 1rem; line-height: 1.65; max-width: 640px; }
 .record-divider { padding: 2rem 0; border-bottom: 1px solid var(--rule-bright); }
 .record-divider span { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--paper-dim); }
+.portfolio-strip { margin-top: 4rem; margin-bottom: 2rem; }
+.portfolio-strip-label { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--rule-bright); }
+.portfolio-grid { display: flex; flex-wrap: wrap; gap: 0; }
+.portfolio-grid a { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: 1.5rem; font-weight: 400; color: var(--paper); padding: 1.5rem 2.5rem; border: 1px solid var(--rule); margin: -0.5px; transition: background 0.3s ease, color 0.3s ease; letter-spacing: -0.01em; }
+.portfolio-grid a::after { display: none; }
+.portfolio-grid a:hover { background: rgba(212, 160, 90, 0.08); color: var(--amber); }
+@media (max-width: 860px) { .portfolio-grid a { font-size: 1.2rem; padding: 1.2rem 1.8rem; } }
 .learned { background: var(--void-2); position: relative; }
 .learned::before, .learned::after { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: var(--rule-bright); }
 .learned::before { top: 0; }
@@ -275,6 +282,16 @@ section { padding: 6rem 0; }
 <div class="section-meta"><span class="num">§ 03</span>The Record</div>
 <h2>What I've <span class="heavy">done.</span></h2>
 </div>
+<div class="portfolio-strip reveal">
+<div class="portfolio-strip-label">Current &amp; Past Advisory Portfolio</div>
+<div class="portfolio-grid">
+<a href="https://www.aalo.com">Aalo Atomics</a>
+<a href="https://www.hanwha.com">Hanwha / QCells</a>
+<a href="https://atomic-canyon.com">Atomic Canyon</a>
+<a href="https://enchantedrock.com">Enchanted Rock</a>
+<a href="https://www.terrapraxis.org">Terra Praxis</a>
+</div>
+</div>
 <div class="record">
 <div class="record-item reveal">
 <div class="record-meta"><span class="status">Active</span><br>Current Engagement<span class="dates">Dec 2024 — Present</span></div>
@@ -282,30 +299,6 @@ section { padding: 6rem 0; }
 <h3>SVP of Commercialization</h3>
 <span class="org"><a href="https://www.aalo.com">Aalo Atomics</a> / Austin, TX</span>
 <p>Lead commercialization and go-to-market strategy for mass-manufactured, next-generation nuclear energy systems. Drive market development, strategic partnerships, and investment strategy to accelerate deployment. Aalo is building sodium-cooled reactors aimed at the AI data center buildout. I help the team think clearly about market entry, financing structures, and how to tell the story.</p>
-</div>
-</div>
-<div class="record-item reveal">
-<div class="record-meta"><span class="status">Active</span><br>Strategic Consulting<span class="dates">2025 — Present</span></div>
-<div class="record-content">
-<h3>Strategic Consultant</h3>
-<span class="org"><a href="https://www.hanwha.com">Hanwha Group</a> / <a href="https://www.qcells.com">QCells Technology Group</a></span>
-<p>Independent advisory to one of the largest industrial conglomerates in the world on virtual power plants, data center energy solutions, and distributed energy strategy. Helping the team think through how its U.S. technology business shows up in a fast-moving power market and where the real commercial leverage sits.</p>
-</div>
-</div>
-<div class="record-item reveal">
-<div class="record-meta"><span class="status">Active</span><br>Advisory Board<span class="dates">2024 — Present</span></div>
-<div class="record-content">
-<h3>Advisory Board Member</h3>
-<span class="org"><a href="https://atomic-canyon.com">Atomic Canyon</a></span>
-<p>Atomic Canyon is applying frontier AI to commercial nuclear plant operations, starting with the regulatory and compliance documentation that slows every reactor project down. Their first deployment was the first commercial generative AI tool at a U.S. nuclear plant. I advise on commercial strategy, partnerships, and market positioning.</p>
-</div>
-</div>
-<div class="record-item reveal">
-<div class="record-meta"><span class="status">Active</span><br>Solo Founder<span class="dates">2025 — Present</span></div>
-<div class="record-content">
-<h3>Greenbelt · ScaleOS · Lumen</h3>
-<span class="org"><a href="https://projectgreenbelt.com/portfolio">Greenbelt</a> · AI-Native Platforms</span>
-<p>Three AI-native platforms shipped as a solo, non-technical founder. Greenbelt is a venture intelligence platform built around the idea that AI sycophancy is an architectural problem you can solve with structural opposition. ScaleOS is a commercialization readiness engine for deep tech. Lumen is an off-market residential real estate intelligence platform. They taught me a lot about product-market fit. They also taught me about my own relationship with building, which turned out to be the more useful lesson.</p>
 </div>
 </div>
 <div class="record-divider reveal"><span>Previous</span></div>
