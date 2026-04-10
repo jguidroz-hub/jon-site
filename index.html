@@ -133,23 +133,36 @@ h2 .heavy { font-weight: 600; }
 .reveal-3 { transition-delay: 0.4s; }
 @media (max-width: 860px) {
 .container { padding: 0 1.5rem; }
-nav { padding: 1.5rem; }
-nav .coords { gap: 1rem; }
+nav { padding: 1.2rem 1.5rem; flex-wrap: wrap; }
+nav .coords { gap: 0.8rem; font-size: 0.65rem; }
+nav .coords span:first-child { display: none; }
 nav .coords span:nth-child(2) { display: none; }
-.hero { padding: 7rem 1.5rem 4rem; }
-.hero-bottom { grid-template-columns: 1fr; gap: 2.5rem; }
+.hero { padding: 6rem 1.5rem 3rem; min-height: auto; }
+.hero h1 { font-size: clamp(3rem, 12vw, 5rem); margin-bottom: 2rem; }
+.hero-mark { margin-bottom: 2rem; }
+.hero-bottom { grid-template-columns: 1fr; gap: 2rem; }
 .hero-coords { justify-self: start; text-align: left; }
-section { padding: 6rem 0; }
-.closing { padding: 9rem 0 6rem; }
-.section-head { grid-template-columns: 1fr; gap: 1.5rem; }
+.hero-statement { font-size: clamp(1.1rem, 4vw, 1.4rem); }
+section { padding: 4rem 0; }
+.section-head { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 3rem; }
 .prose { margin-left: 0; }
+.prose p.lead { font-size: 1.2rem; }
 .ops { grid-template-columns: 1fr; }
 .ops-col.yes { border-right: none; }
-.ops-col { padding: 2rem; }
-.record-item { grid-template-columns: 1fr; gap: 1.5rem; padding: 2.5rem 0; }
-.contact-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
-.contact-brand { grid-column: 1 / -1; }
-.statusbar { grid-template-columns: auto 1fr auto; }
+.ops-col { padding: 1.5rem; }
+.ops-list li { font-size: 0.9rem; grid-template-columns: 2rem 1fr; gap: 0.6rem; padding: 0.9rem 0; }
+.portfolio-grid { flex-direction: column; }
+.portfolio-grid a { font-size: 1.1rem; padding: 1rem 1.5rem; text-align: center; }
+.record-item { grid-template-columns: 1fr; gap: 1rem; padding: 2rem 0; }
+.record-content h3 { font-size: 1.4rem; }
+.record-content p { font-size: 0.95rem; }
+.record-meta .status { font-size: 0.6rem; }
+.closing { padding: 6rem 0 4rem; }
+.closing-sub { font-size: 0.95rem; }
+.contact { padding: 4rem 0 3rem; }
+.contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+.contact-brand { margin-bottom: 1rem; }
+.statusbar { grid-template-columns: auto 1fr auto; font-size: 0.58rem; padding: 1rem 1.5rem; gap: 1rem; }
 .statusbar span:nth-child(4) { display: none; }
 }
 </style>
