@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#08090b">
+<title>Jon Guidroz — Personal</title>
+<meta name="description" content="The human behind the record.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,200;9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+--void: #08090b;
+--void-2: #0e1014;
+--void-3: #14171c;
+--paper: #e8e5d9;
+--paper-dim: #8a8578;
+--paper-faint: #4d4a42;
+--amber: #d4a05a;
+--amber-bright: #e8b866;
+--amber-deep: #8a5e28;
+--rule: #22252b;
+--rule-bright: #3a3e48;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; color-scheme: dark only; background: #08090b; }
+body { background: #08090b; color: #e8e5d9; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.6; font-weight: 400; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+main { position: relative; z-index: 2; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 2.5rem; }
+a { color: var(--amber); text-decoration: none; transition: color 0.3s ease; }
+a:hover { color: var(--amber-bright); }
+nav { padding: 1.8rem 2.5rem; display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; }
+nav .brand { color: var(--paper); font-weight: 500; }
+nav .brand a { color: var(--paper); }
+nav .brand a:hover { color: var(--amber); }
+nav .coords { color: var(--paper-dim); }
+.personal-hero { padding: 10rem 0 6rem; }
+.personal-hero h1 { font-family: 'Fraunces', Georgia, serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: clamp(2.8rem, 7vw, 5rem); font-weight: 300; line-height: 1; letter-spacing: -0.03em; color: var(--paper); margin-bottom: 2rem; }
+.personal-hero h1 .heavy { font-weight: 600; }
+.personal-hero .subtitle { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber); margin-bottom: 4rem; display: flex; align-items: center; gap: 1rem; }
+.personal-hero .subtitle::before { content: ''; width: 2rem; height: 1px; background: var(--amber); }
+section { padding: 6rem 0; }
+.manifesto { padding: 8rem 0; background: linear-gradient(to bottom, transparent, var(--void-2) 20%, var(--void-2) 80%, transparent); }
+.manifesto-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber); margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1rem; }
+.manifesto-label::before, .manifesto-label::after { content: ''; flex: 1; height: 1px; background: var(--rule-bright); }
+.manifesto-text { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: clamp(1.8rem, 4.2vw, 3.2rem); line-height: 1.15; font-weight: 300; color: var(--paper); text-align: center; letter-spacing: -0.02em; }
+.manifesto-text .em { color: var(--amber); font-weight: 500; }
+.manifesto-attribution { display: block; text-align: center; margin-top: 3rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--paper-dim); }
+.prose p { font-size: 1.08rem; line-height: 1.65; margin-bottom: 1.4rem; color: var(--paper); }
+.prose p.lead { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-weight: 300; font-size: 1.5rem; line-height: 1.4; margin-bottom: 2rem; }
+.prose .accent { color: var(--amber); font-weight: 500; }
+.section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule-bright); margin-bottom: 3rem; }
+.notes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); margin-top: 3rem; }
+.note { padding: 3rem; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); transition: background 0.4s ease; }
+.note:hover { background: rgba(212, 160, 90, 0.04); }
+.note .num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--amber); margin-bottom: 1.2rem; display: block; }
+.note p { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: 1.25rem; line-height: 1.4; color: var(--paper); font-weight: 300; }
+.note p .em { font-weight: 500; color: var(--amber-bright); }
+.volunteer { padding: 3rem 0; border-bottom: 1px solid var(--rule-bright); }
+.volunteer h3 { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: 1.4rem; font-weight: 400; color: var(--paper); margin-bottom: 0.4rem; }
+.volunteer .org { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--amber); display: block; margin-bottom: 1rem; }
+.volunteer p { font-size: 1rem; line-height: 1.65; color: var(--paper); opacity: 0.85; }
+.marquee { overflow: hidden; border-top: 1px solid var(--rule-bright); border-bottom: 1px solid var(--rule-bright); padding: 2.2rem 0; background: var(--void); }
+.marquee-track { display: flex; width: max-content; animation: marquee 60s linear infinite; will-change: transform; }
+.marquee-track span { font-family: 'Fraunces', Georgia, serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 300; color: var(--paper); padding: 0 2rem; letter-spacing: -0.02em; white-space: nowrap; }
+.marquee-track .dot { color: var(--amber); padding: 0 1rem; font-weight: 600; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.back-link { padding: 6rem 0; text-align: center; }
+.back-link a { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--paper-dim); transition: color 0.3s ease; }
+.back-link a:hover { color: var(--amber); }
+.statusbar { border-top: 1px solid var(--rule); background: var(--void); padding: 1.4rem 2.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--paper-dim); text-align: center; }
+@media (max-width: 860px) {
+.container { padding: 0 1.5rem; }
+.personal-hero { padding: 7rem 0 4rem; }
+.notes { grid-template-columns: 1fr; }
+.note { padding: 2rem; }
+}
+</style>
+</head>
+<body>
+<nav>
+<div class="brand"><a href="/">← JG / ATX</a></div>
+<div class="coords">Personal</div>
+</nav>
+<main>
+<section class="personal-hero">
+<div class="container">
+<div class="subtitle">The human behind the record</div>
+<h1>Who I am <span class="heavy">beyond</span> the work.</h1>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="prose">
+<p class="lead">For about twenty years I worked in energy strategy and business development at Amazon, Google, and Microsoft. I led teams. I built new businesses. I spent a lot of time thinking about how the biggest companies in the world should approach power and infrastructure.</p>
+<p>These days I run an independent practice and I am choosier about what I take on. My current portfolio is small and intentional.</p>
+<p>Most of my work lives in what I think of as the <span class="accent">translation gap</span>: the place where deep technology dies, not because the science was wrong, but because the founders and the buyers couldn't talk to each other. Bridging that gap is the most interesting problem I know.</p>
+</div>
+</div>
+</section>
+
+<section class="manifesto">
+<div class="container">
+<div class="manifesto-label">On the method</div>
+<p class="manifesto-text">The antidote to exhaustion is not rest.<br>The antidote to exhaustion is <span class="em">wholeheartedness</span>.</p>
+<span class="manifesto-attribution">David Whyte</span>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-label">Field Notes</div>
+<h2 style="font-family:'Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 0;font-size:clamp(2.2rem,5.5vw,4.2rem);line-height:1;letter-spacing:-0.03em;font-weight:300;color:var(--paper);margin-bottom:2rem;">Six things I have learned the <span style="font-weight:600;color:var(--amber);">hard way.</span></h2>
+<div class="notes">
+<div class="note"><span class="num">N.01</span><p>I'm drawn to building things. That can be <span class="em">a trap</span>.</p></div>
+<div class="note"><span class="num">N.02</span><p>The feeling of significance you get from operating at a high level is real. It's also <span class="em">temporary</span>. And it isn't actually the thing I'm after.</p></div>
+<div class="note"><span class="num">N.03</span><p>I consistently <span class="em">underestimate</span> how much time and energy a new commitment is going to take. I am working on this.</p></div>
+<div class="note"><span class="num">N.04</span><p>Saying yes to something interesting is the easiest thing in the world. Saying <span class="em">no with love</span> is harder, and I'm still learning.</p></div>
+<div class="note"><span class="num">N.05</span><p>My best work has always come from <span class="em">real curiosity</span>, not from ambition. I keep forgetting this and then remembering it.</p></div>
+<div class="note"><span class="num">N.06</span><p>Being a present father and husband is harder than any strategy work I have ever done. It is also the only work that <span class="em">has ever really mattered</span>.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-label">Community</div>
+<div class="volunteer">
+<h3>Co-Founder</h3>
+<span class="org"><a href="https://www.elisabethroot.com/liminalspace">The Liminal Space</a></span>
+<p>A supportive three-month call series for curious tech leaders ready to tap into somatic and mindfulness tools, beginner's mind, and experiments that invite transformation.</p>
+</div>
+</div>
+</section>
+
+<div class="marquee">
+<div class="marquee-track">
+<span>Curiosity is the oxygen.</span><span class="dot">✦</span><span>Flow over force.</span><span class="dot">✦</span><span>Purpose in the present.</span><span class="dot">✦</span><span>Bridge the translation gap.</span><span class="dot">✦</span><span>Curiosity is the oxygen.</span><span class="dot">✦</span><span>Flow over force.</span><span class="dot">✦</span><span>Purpose in the present.</span><span class="dot">✦</span><span>Bridge the translation gap.</span><span class="dot">✦</span>
+</div>
+</div>
+
+<div class="back-link">
+<a href="/">← Back to the professional record</a>
+</div>
+
+</main>
+<div class="statusbar">© MMXXVI · Jon Guidroz · Austin, Texas</div>
+</body>
+</html>

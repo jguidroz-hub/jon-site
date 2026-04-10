@@ -7,11 +7,11 @@
 <meta name="theme-color" content="#08090b">
 <meta name="supported-color-schemes" content="dark">
 <title>Jon Guidroz</title>
-<meta name="description" content="Energy infrastructure &amp; commercialization executive. Independent board candidate. Advisory practice serving energy, industrial, and deep-tech companies selling into hyperscaler CAPEX.">
-<meta property="og:title" content="Jon Guidroz">
-<meta property="og:description" content="Energy infrastructure &amp; commercialization executive. Independent board candidate. Advisory practice for hyperscaler CAPEX.">
+<meta name="description" content="Energy infrastructure & commercialization executive. Independent board candidate. 20+ years at Amazon, Google, and Microsoft. Advisory practice serving energy, industrial, and deep-tech companies selling into hyperscaler CAPEX.">
+<meta property="og:title" content="Jon Guidroz — Energy Infrastructure Executive & Independent Board Candidate">
+<meta property="og:description" content="20+ years building energy strategy at Amazon, Google, and Microsoft. Open to independent board roles in energy, industrial, and deep-tech.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://projectgreenbelt.com">
+<meta property="og:url" content="https://jon.projectgreenbelt.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,200;9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -44,6 +44,9 @@ main { position: relative; z-index: 2; }
 nav { position: fixed; top: 0; left: 0; right: 0; padding: 1.8rem 2.5rem; display: flex; justify-content: space-between; align-items: center; z-index: 50; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; mix-blend-mode: difference; }
 nav .brand { color: var(--paper); font-weight: 500; }
 nav .coords { color: var(--paper-dim); display: flex; gap: 2rem; }
+nav .coords a { color: var(--paper-dim); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; }
+nav .coords a::after { display: none; }
+nav .coords a:hover { color: var(--amber); }
 a { color: var(--amber); text-decoration: none; transition: color 0.3s ease; position: relative; }
 a::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1px; background: var(--amber); transform: scaleX(0); transform-origin: left; transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1); }
 a:hover::after { transform: scaleX(1); }
@@ -72,14 +75,7 @@ h2 .heavy { font-weight: 600; }
 .prose p { font-size: 1.08rem; line-height: 1.65; margin-bottom: 1.4rem; color: var(--paper); }
 .prose p.lead { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-weight: 300; font-size: 1.5rem; line-height: 1.4; color: var(--paper); margin-bottom: 2rem; }
 .prose .accent { color: var(--amber); font-weight: 500; }
-.manifesto { padding: 14rem 0; position: relative; background: linear-gradient(to bottom, transparent, var(--void-2) 20%, var(--void-2) 80%, transparent); }
-.manifesto-inner { max-width: 1000px; margin: 0 auto; padding: 0 2.5rem; }
-.manifesto-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber); margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1rem; }
-.manifesto-label::before, .manifesto-label::after { content: ''; flex: 1; height: 1px; background: var(--rule-bright); }
-.manifesto-text { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: clamp(1.8rem, 4.2vw, 3.2rem); line-height: 1.15; font-weight: 300; color: var(--paper); text-align: center; letter-spacing: -0.02em; }
-.manifesto-text .em { color: var(--amber); font-weight: 500; }
-.manifesto-attribution { display: block; text-align: center; margin-top: 3rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--paper-dim); }
-.ops { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 0; border: 1px solid var(--rule-bright); margin-top: 4rem; background: rgba(14, 16, 20, 0.7); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.ops { display: grid; grid-template-columns: 1fr; gap: 0; border: 1px solid var(--rule-bright); margin-top: 4rem; background: rgba(14, 16, 20, 0.7); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 .ops-col { padding: 3rem; position: relative; }
 .ops-col.yes { border-right: 1px solid var(--rule-bright); }
 .ops-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
@@ -92,8 +88,6 @@ h2 .heavy { font-weight: 600; }
 .ops-list li:last-child { border-bottom: none; }
 .ops-list li::before { content: counter(item, decimal-leading-zero); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--paper-faint); padding-top: 0.25rem; }
 .ops-col.yes .ops-list li:hover { color: var(--amber-bright); transform: translateX(4px); }
-.ops-col.no .ops-list li { color: var(--paper-dim); }
-.ops-col.no .ops-list li:hover { color: var(--paper); }
 .record { margin-top: 2rem; border-top: 1px solid var(--rule-bright); }
 .record-item { display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; padding: 3.5rem 0; border-bottom: 1px solid var(--rule-bright); transition: background 0.4s ease; }
 .record-item:hover { background: rgba(212, 160, 90, 0.03); }
@@ -112,16 +106,6 @@ h2 .heavy { font-weight: 600; }
 .portfolio-grid a::after { display: none; }
 .portfolio-grid a:hover { background: rgba(212, 160, 90, 0.08); color: var(--amber); }
 @media (max-width: 860px) { .portfolio-grid a { font-size: 1.2rem; padding: 1.2rem 1.8rem; } }
-.learned { background: var(--void-2); position: relative; }
-.learned::before, .learned::after { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: var(--rule-bright); }
-.learned::before { top: 0; }
-.learned::after { bottom: 0; }
-.notes { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 4rem; border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
-.note { padding: 3rem; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); transition: background 0.4s ease; }
-.note:hover { background: rgba(212, 160, 90, 0.04); }
-.note .num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--amber); margin-bottom: 1.2rem; display: block; }
-.note p { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: 1.25rem; line-height: 1.4; color: var(--paper); font-weight: 300; }
-.note p .em { font-weight: 500; color: var(--amber-bright); }
 .closing { padding: 14rem 0 10rem; text-align: center; }
 .closing-text { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1; font-weight: 300; letter-spacing: -0.03em; color: var(--paper); }
 .closing-text .break { display: block; font-weight: 600; color: var(--amber); margin-top: 0.5rem; }
@@ -139,11 +123,6 @@ h2 .heavy { font-weight: 600; }
 .statusbar .label { color: var(--paper-faint); }
 .statusbar .value { color: var(--paper); }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-.marquee { overflow: hidden; border-top: 1px solid var(--rule-bright); border-bottom: 1px solid var(--rule-bright); padding: 2.2rem 0; background: var(--void); position: relative; z-index: 3; }
-.marquee-track { display: flex; width: max-content; animation: marquee 60s linear infinite; will-change: transform; }
-.marquee-track span { font-family: 'Fraunces', Georgia, serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 300; color: var(--paper); padding: 0 2rem; letter-spacing: -0.02em; white-space: nowrap; }
-.marquee-track .dot { color: var(--amber); padding: 0 1rem; font-weight: 600; }
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes fadeIn { to { opacity: 1; } }
 @keyframes charRise { to { opacity: 1; transform: translateY(0); } }
 @keyframes expandWidth { from { opacity: 0; transform: scaleX(0); } to { opacity: 1; transform: scaleX(1); } }
@@ -161,16 +140,13 @@ nav .coords span:nth-child(2) { display: none; }
 .hero-bottom { grid-template-columns: 1fr; gap: 2.5rem; }
 .hero-coords { justify-self: start; text-align: left; }
 section { padding: 6rem 0; }
-.manifesto { padding: 9rem 0; }
 .closing { padding: 9rem 0 6rem; }
 .section-head { grid-template-columns: 1fr; gap: 1.5rem; }
 .prose { margin-left: 0; }
 .ops { grid-template-columns: 1fr; }
-.ops-col.yes { border-right: none; border-bottom: 1px solid var(--rule-bright); }
+.ops-col.yes { border-right: none; }
 .ops-col { padding: 2rem; }
 .record-item { grid-template-columns: 1fr; gap: 1.5rem; padding: 2.5rem 0; }
-.notes { grid-template-columns: 1fr; }
-.note { padding: 2rem; }
 .contact-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
 .contact-brand { grid-column: 1 / -1; }
 .statusbar { grid-template-columns: auto 1fr auto; }
@@ -186,15 +162,20 @@ section { padding: 6rem 0; }
 <div class="coords">
 <span>30.2672° N</span>
 <span>97.7431° W</span>
+<a href="/personal">Personal</a>
 <span id="time">—</span>
 </div>
 </nav>
 <main>
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════════ -->
 <section class="hero">
 <div class="hero-inner">
 <div class="hero-mark">
 <span class="line"></span>
-<span class="label">Strategist. Advisor.</span>
+<span class="label">Board Candidate. Advisor.</span>
 </div>
 <h1 id="hero-title"></h1>
 <div class="hero-divider"></div>
@@ -202,8 +183,8 @@ section { padding: 6rem 0; }
 <p class="hero-statement">Twenty years building and leading energy strategy at Amazon, Google, and Microsoft. Now advising founders, CEOs, and boards at energy, industrial, and deep-tech companies competing for hyperscaler CAPEX.</p>
 <div class="hero-coords">
 <div class="coord-row">
-<span class="coord-label">Practice</span>
-<span class="coord-value">Independent Advisory</span>
+<span class="coord-label">Focus</span>
+<span class="coord-value">Energy · AI Infrastructure · Data Center Power</span>
 </div>
 <div class="coord-row">
 <span class="coord-label">Current</span>
@@ -211,90 +192,45 @@ section { padding: 6rem 0; }
 </div>
 <div class="coord-row">
 <span class="coord-label">Status</span>
-<span class="coord-value">Selectively engaged</span>
+<span class="coord-value">Open to board roles</span>
 </div>
 </div>
 </div>
 </div>
 </section>
+
+<!-- ═══════════════════════════════════════════════════════
+     § 01 — BOARD VALUE (first thing after hero)
+     ═══════════════════════════════════════════════════════ -->
 <section>
 <div class="container">
 <div class="section-head reveal">
-<div class="section-meta"><span class="num">§ 01</span>The Ground</div>
-<h2>Who I am <span class="heavy">now.</span></h2>
-</div>
-<div class="prose">
-<p class="lead reveal reveal-1">For about twenty years I worked in energy strategy and business development at Amazon, Google, and Microsoft. I led teams. I built new businesses. I spent a lot of time thinking about how the biggest companies in the world should approach power and infrastructure.</p>
-<p class="reveal reveal-2">I was good at it. I still am. These days I run an independent practice and I am choosier about what I take on.</p>
-<p class="reveal reveal-2">My current portfolio is small and intentional. I'm SVP of Commercialization &amp; Strategy at <a href="https://www.aalo.com">Aalo Atomics</a>, leading go-to-market for mass-manufactured next-generation nuclear energy. I'm a strategic consultant to Hanwha Group and QCells Technology Group, advising on virtual power plants, data center energy solutions, and how a global industrial conglomerate plays in U.S. distributed energy markets. And I sit on the advisory board of Atomic Canyon, which is applying frontier AI to commercial nuclear plant operations.</p>
-<p class="reveal reveal-3">Most of my work lives in what I think of as the <span class="accent">translation gap</span>: the place where deep technology dies, not because the science was wrong, but because the founders and the buyers couldn't talk to each other. Bridging that gap is the most interesting problem I know.</p>
-<p class="reveal reveal-3">I'm open to additional board seats and advisory roles where the people are good and the work is real. The good ones tend to come through introductions from people I already trust. If that sounds like you, the door is open.</p>
-</div>
-</div>
-</section>
-<section class="manifesto">
-<div class="manifesto-inner">
-<div class="manifesto-label reveal">On the method</div>
-<p class="manifesto-text reveal reveal-1">The antidote to exhaustion is not rest.<br>The antidote to exhaustion is <span class="em">wholeheartedness</span>.</p>
-<span class="manifesto-attribution reveal reveal-2">David Whyte</span>
-</div>
-</section>
-<section>
-<div class="container">
-<div class="section-head reveal">
-<div class="section-meta"><span class="num">§ 02</span>Board Value</div>
+<div class="section-meta"><span class="num">§ 01</span>Board Value</div>
 <h2>What I bring to a <span class="heavy">board.</span></h2>
 </div>
 <div class="ops reveal reveal-1">
 <div class="ops-col yes" style="border-right: none;">
-<div class="ops-head"><span class="key">+ Board Value Proposition</span><span class="count">05 / ITEMS</span></div>
+<div class="ops-head"><span class="key">+ Board Value Proposition</span><span class="count">06 / ITEMS</span></div>
 <ul class="ops-list">
 <li><strong style="color:var(--amber);">Hyperscaler GTM</strong> — translating hyperscaler CAPEX demand signals into commercial strategy, offtake structures, and go-to-market plans for industrial and energy suppliers</li>
-<li><strong style="color:var(--amber);">Energy commercial &amp; regulatory</strong> — PPA structuring, energy-as-a-service, behind-the-meter origination in ERCOT, FERC filings, and utility/grid operator engagement across multiple jurisdictions</li>
-<li><strong style="color:var(--amber);">New market creation</strong> — commercialized advanced nuclear, renewables, storage, and VPP solutions; founded AWS's global energy vertical ($1B+ ARR) and led energy strategy at Google Cloud and Microsoft</li>
-<li><strong style="color:var(--amber);">Public-company operating experience</strong> — officer of a $1.2B+ NYSE energy services company; scaled and led teams of 140+ with $20M+ budgets through a severe industry downturn</li>
-<li><strong style="color:var(--amber);">Stakeholder reach</strong> — speaker at UN COP28, CERAWeek, and the White House Impact Investing Summit; relationships across utilities, OEMs, federal agencies, and the hyperscaler community</li>
+<li><strong style="color:var(--amber);">Energy commercial &amp; regulatory</strong> — PPA structuring, energy-as-a-service, behind-the-meter origination in ERCOT, FERC filings, NRC engagement, and utility/grid operator navigation across multiple jurisdictions</li>
+<li><strong style="color:var(--amber);">New market creation</strong> — commercialized advanced nuclear, renewables, storage, and VPP solutions; founded AWS's global energy vertical ($1B+ ARR, 1,000+ person organization) and led energy strategy at Google Cloud and Microsoft</li>
+<li><strong style="color:var(--amber);">Public-company governance</strong> — officer of a $1.2B+ NYSE energy services company with P&amp;L accountability, board-level reporting, audit exposure, and fiduciary experience navigating a severe industry downturn with a 62% budget reduction</li>
+<li><strong style="color:var(--amber);">Technical oversight</strong> — served as interim CTO at Microsoft Energy &amp; Resources; able to evaluate technical risk, architecture decisions, and engineering roadmaps alongside commercial strategy</li>
+<li><strong style="color:var(--amber);">Stakeholder reach</strong> — speaker at UN COP28, CERAWeek, and the White House Impact Investing Summit; relationships spanning utilities, OEMs, federal agencies, grid operators, and the hyperscaler community</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════════════
+     § 02 — THE RECORD
+     ═══════════════════════════════════════════════════════ -->
 <section>
 <div class="container">
 <div class="section-head reveal">
-<div class="section-meta"><span class="num">§ 03</span>Operating Parameters</div>
-<h2>What I say <span class="heavy">yes</span> to.<br>What I say <span class="heavy">no</span> to.</h2>
-</div>
-<div class="ops reveal reveal-1">
-<div class="ops-col yes">
-<div class="ops-head"><span class="key">+ Where I Add Value</span><span class="count">06 / ITEMS</span></div>
-<ul class="ops-list">
-<li>Strategic questions where pattern recognition matters more than execution speed</li>
-<li>Thesis development, market analysis, and adversarial stress tests of ideas you already love</li>
-<li>Translating between disciplines, industries, and groups that don't naturally talk to each other</li>
-<li>Conversations where both of us leave thinking differently than we walked in</li>
-<li>Founders navigating the gap between what they're building and who they want to become</li>
-<li>Engagements with a defined scope, a clear deliverable, and mutual respect for time</li>
-</ul>
-</div>
-<div class="ops-col no">
-<div class="ops-head"><span class="key">− Not the Right Fit</span><span class="count">04 / ITEMS</span></div>
-<ul class="ops-list">
-<li>Full-time or fractional operational roles</li>
-<li>Open-ended advisory without a defined scope</li>
-<li>Engagements where the real ask is much bigger than the initial conversation suggests</li>
-<li>Anything where my honest answer is "I could do this" instead of "I want to"</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-
-<section>
-<div class="container">
-<div class="section-head reveal">
-<div class="section-meta"><span class="num">§ 04</span>The Record</div>
+<div class="section-meta"><span class="num">§ 02</span>The Record</div>
 <h2>What I've <span class="heavy">done.</span></h2>
 </div>
 <div class="portfolio-strip reveal">
@@ -306,16 +242,15 @@ section { padding: 6rem 0; }
 <a href="https://enchantedrock.com">Enchanted Rock</a>
 <a href="https://greentownlabs.com">Greentown Labs</a>
 <a href="https://www.terrapraxis.org">Terra Praxis</a>
-<a href="https://www.elisabethroot.com/liminalspace">The Liminal Space</a>
 </div>
 </div>
 <div class="record">
 <div class="record-item reveal">
 <div class="record-meta"><span class="status">Active</span><br>Current Engagement<span class="dates">2024 — Present</span></div>
 <div class="record-content">
-<h3>SVP, Commercialization &amp; Strategy</h3>
+<h3>SVP, Commercialization &amp; Strategy / Strategic Advisor to CEO</h3>
 <span class="org"><a href="https://www.aalo.com">Aalo Atomics</a> / Austin, TX</span>
-<p>Built the commercial function from zero for a next-generation nuclear company manufacturing sodium-cooled microreactors for data center and industrial loads. Closed first commercial agreements and developed a multi-customer convertible pipeline structured to de-risk single-industry concentration and diversify revenue sources. Architected Aalo's presence in the Microsoft &amp; NVIDIA "AI for Nuclear" announcement at CERAWeek 2026, including the public 92% permitting reduction / ~$80M annual savings story. Structured PPAs and energy-as-a-service frameworks for hyperscale offtake. Aligned commercial structure with investor and project-finance expectations; positioned utilities as partners rather than counterparties.</p>
+<p>Built the commercial function from zero for a next-generation nuclear company manufacturing sodium-cooled microreactors for data center and industrial loads. Closed first commercial agreements and developed a multi-customer convertible pipeline structured to de-risk single-industry concentration and diversify revenue sources. Architected Aalo's presence in the Microsoft &amp; NVIDIA "AI for Nuclear" announcement at CERAWeek 2026, including the public 92% permitting reduction / ~$80M annual savings story. Structured PPAs and energy-as-a-service frameworks for hyperscale offtake. Aligned commercial structure with investor and project-finance expectations; positioned utilities as partners rather than counterparties. Currently advising the CEO on commercial strategy, partnership structures, and regulatory positioning.</p>
 </div>
 </div>
 <div class="record-divider reveal"><span>Advisory &amp; Board</span></div>
@@ -348,7 +283,7 @@ section { padding: 6rem 0; }
 <div class="record-content">
 <h3>Board of Advisors</h3>
 <span class="org"><a href="https://greentownlabs.com">Greentown Labs</a></span>
-<p>Board of Advisors member at North America's largest climatetech startup incubator.</p>
+<p>Board of Advisors member at North America's largest climatetech startup incubator. Guided portfolio companies on energy market entry, hyperscaler engagement, and commercial strategy.</p>
 </div>
 </div>
 <div class="record-divider reveal"><span>Operating History</span></div>
@@ -357,13 +292,13 @@ section { padding: 6rem 0; }
 <div class="record-content">
 <h3>Chief Strategy Officer &amp; Interim CTO, Energy &amp; Resources</h3>
 <span class="org"><a href="https://www.microsoft.com">Microsoft</a></span>
-<p>Led worldwide commercial strategy for Microsoft's energy industry vertical. Promoted from Senior Director and granted external CSO title. Architected the Microsoft &amp; NVIDIA CERAWeek announcement projecting 92% reduction in permitting timelines and ~$80M in estimated annual customer savings. Commercialized Azure Data Manager for Energy. Orchestrated global partnerships with Schneider Electric and SLB delivering AI-driven energy solutions at scale.</p>
+<p>Led worldwide commercial strategy for Microsoft's energy industry vertical. Promoted from Senior Director and granted external CSO title. Served as interim CTO, evaluating technical architecture and engineering roadmap decisions for the energy platform. Architected the Microsoft &amp; NVIDIA CERAWeek announcement projecting 92% reduction in permitting timelines and ~$80M in estimated annual customer savings. Commercialized Azure Data Manager for Energy. Orchestrated global partnerships with Schneider Electric and SLB delivering AI-driven energy solutions at scale.</p>
 </div>
 </div>
 <div class="record-item reveal">
 <div class="record-meta"><span class="dates">2018 — 2020</span></div>
 <div class="record-content">
-<h3>Senior Director, Energy Partnerships</h3>
+<h3>Senior Director, Energy Partnerships &amp; Business Development</h3>
 <span class="org"><a href="https://cloud.google.com">Google Cloud</a></span>
 <p>Led global energy strategy for Google Cloud, aligning energy procurement with engineering and data center expansion roadmaps. Achieved 100% partner attachment rate on energy deals. Built partner-channel strategy that materially accelerated revenue and expanded market presence. Represented Google in energy-focused open-source community governing body.</p>
 </div>
@@ -381,7 +316,7 @@ section { padding: 6rem 0; }
 <div class="record-content">
 <h3>VP, Sales, Business Development &amp; Marketing (Officer)</h3>
 <span class="org">Key Energy Services (NYSE)</span>
-<p>Officer of a publicly traded energy services company. Promoted three times in under four years. Accountable for $1.2B+ in revenue, 140+ person organization, $20M+ annual budget. Led commercial realignment through severe industry downturn, delivering on plan with a 62% budget reduction. Implemented the company's first global CRM and centralized pricing function.</p>
+<p>Officer of a publicly traded energy services company. Promoted three times in under four years. Accountable for $1.2B+ in revenue, 140+ person organization, $20M+ annual budget. Led commercial realignment through severe industry downturn, delivering on plan with a 62% budget reduction. Implemented the company's first global CRM (150 users) and stood up its centralized pricing function.</p>
 </div>
 </div>
 <div class="record-item reveal">
@@ -390,6 +325,14 @@ section { padding: 6rem 0; }
 <h3>Director, Project Development</h3>
 <span class="org">Free Flow Power Corporation</span>
 <p>Third employee at a hydropower startup. Secured $6M in equity investment and drove the company's first revenue. Drafted FERC filings and led utility interconnection and federal/state permitting. Advised on energy legislation; invited twice to the White House.</p>
+</div>
+</div>
+<div class="record-item reveal">
+<div class="record-meta"><span class="dates">2003 — 2008</span></div>
+<div class="record-content">
+<h3>Earlier Career</h3>
+<span class="org">CEB (now Gartner) · Evolution Markets · Procter &amp; Gamble</span>
+<p>Account Director at CEB managing 125 large corporations ($1B+ revenue each), consistently ranking in the top 5% of the firm. Renewable energy market strategy at Evolution Markets. National media spokesperson for Procter &amp; Gamble, reaching 52.7 million people.</p>
 </div>
 </div>
 <div class="record-divider reveal"><span>Speaking</span></div>
@@ -403,39 +346,44 @@ section { padding: 6rem 0; }
 <div class="record-item reveal">
 <div class="record-meta"><span class="dates"></span></div>
 <div class="record-content">
-<p>Harvard Business School, Executive Education — Leadership &amp; Change Management<br>Rice University, Jones Graduate School of Business — Graduate Certificate, Finance &amp; Accounting<br>The George Washington University — B.A., International Relations (Business &amp; Politics), Cum Laude</p>
+<p>Harvard Business School, Executive Education — Leadership &amp; Change Management<br>Rice University, Jones Graduate School of Business — Graduate Certificate, Finance &amp; Accounting<br>The George Washington University — B.A., International Relations (Business &amp; Politics), Cum Laude<br>Pontif&iacute;cia Universidade Cat&oacute;lica do Rio de Janeiro — Portuguese, Economics &amp; International Business</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<div class="marquee">
-<div class="marquee-track">
-<span>Curiosity is the oxygen.</span><span class="dot">✦</span><span>Flow over force.</span><span class="dot">✦</span><span>Purpose in the present.</span><span class="dot">✦</span><span>Bridge the translation gap.</span><span class="dot">✦</span><span>Curiosity is the oxygen.</span><span class="dot">✦</span><span>Flow over force.</span><span class="dot">✦</span><span>Purpose in the present.</span><span class="dot">✦</span><span>Bridge the translation gap.</span><span class="dot">✦</span>
-</div>
-</div>
-<section class="learned">
+
+<!-- ═══════════════════════════════════════════════════════
+     § 03 — ENGAGEMENT (rewritten from Operating Parameters)
+     ═══════════════════════════════════════════════════════ -->
+<section>
 <div class="container">
 <div class="section-head reveal">
-<div class="section-meta"><span class="num">§ 05</span>Field Notes</div>
-<h2>Six things I have learned the <span class="heavy">hard way.</span></h2>
+<div class="section-meta"><span class="num">§ 03</span>Engagement</div>
+<h2>How I <span class="heavy">work.</span></h2>
 </div>
-<div class="notes">
-<div class="note reveal"><span class="num">N.01</span><p>I'm drawn to building things. That can be <span class="em">a trap</span>.</p></div>
-<div class="note reveal reveal-1"><span class="num">N.02</span><p>The feeling of significance you get from operating at a high level is real. It's also <span class="em">temporary</span>. And it isn't actually the thing I'm after.</p></div>
-<div class="note reveal"><span class="num">N.03</span><p>I consistently <span class="em">underestimate</span> how much time and energy a new commitment is going to take. I am working on this.</p></div>
-<div class="note reveal reveal-1"><span class="num">N.04</span><p>Saying yes to something interesting is the easiest thing in the world. Saying <span class="em">no with love</span> is harder, and I'm still learning.</p></div>
-<div class="note reveal"><span class="num">N.05</span><p>My best work has always come from <span class="em">real curiosity</span>, not from ambition. I keep forgetting this and then remembering it.</p></div>
-<div class="note reveal reveal-1"><span class="num">N.06</span><p>Being a present father and husband is harder than any strategy work I have ever done. It is also the only work that <span class="em">has ever really mattered</span>.</p></div>
+<div class="prose">
+<p class="lead reveal reveal-1">I advise founders, CEOs, and operating teams at energy, industrial, and deep-tech companies competing for hyperscaler CAPEX. My work translates AI infrastructure demand into signed offtake, partnership structures, and commercial outcomes.</p>
+<p class="reveal reveal-2"><strong style="color:var(--amber);">Scope</strong> — commercial strategy, GTM build, hyperscaler and utility origination, PPA and energy-as-a-service structuring, partnership architecture, and board or advisory roles.</p>
+<p class="reveal reveal-2"><strong style="color:var(--amber);">Structure</strong> — retainer, project-based, or equity, depending on stage and fit. Available for independent board seats, fractional commercial leadership, and time-bounded engagements.</p>
+<p class="reveal reveal-3"><strong style="color:var(--amber);">Ideal fit</strong> — seed through growth-stage energy and deep-tech companies; established industrial and energy players building hyperscaler-facing commercial functions; investors and operating partners conducting diligence on energy infrastructure deals.</p>
 </div>
 </div>
 </section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CLOSING
+     ═══════════════════════════════════════════════════════ -->
 <section class="closing">
 <div class="container">
-<p class="closing-text reveal">The door is <span class="break">open.</span></p>
-<p class="closing-sub reveal reveal-1">If you are working on something real in energy or AI infrastructure and looking for a board member, an advisor, or a thinking partner, I would love to hear from you.</p>
+<p class="closing-text reveal">Let's <span class="break">talk.</span></p>
+<p class="closing-sub reveal reveal-1">If you are building or scaling an energy, industrial, or deep-tech company and looking for an independent board member or strategic advisor, I would welcome the conversation.</p>
 </div>
 </section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CONTACT
+     ═══════════════════════════════════════════════════════ -->
 <section class="contact">
 <div class="container">
 <div class="contact-grid">
@@ -445,13 +393,13 @@ section { padding: 6rem 0; }
 </div>
 <div class="contact-col"><h4>Direct</h4><a href="mailto:jguidroz@gmail.com">email →</a></div>
 <div class="contact-col"><h4>Network</h4><a href="https://www.linkedin.com/in/jonguidroz/">linkedin →</a></div>
-<div class="contact-col"><h4>Current</h4><a href="https://www.aalo.com">aalo.com →</a></div>
+<div class="contact-col"><h4>Personal</h4><a href="/personal">about me →</a></div>
 </div>
 </div>
 </section>
 </main>
 <div class="statusbar">
-<span class="live"><span class="dot"></span>SELECTIVELY ENGAGED</span>
+<span class="live"><span class="dot"></span>OPEN TO BOARD ROLES</span>
 <span></span>
 <span><span class="label">Loc /</span> <span class="value">Austin TX</span></span>
 <span><span class="label">Local /</span> <span class="value" id="time-2">—</span></span>
