@@ -239,12 +239,30 @@ section { padding: 4rem 0; }
 </section>
 
 <!-- ═══════════════════════════════════════════════════════
-     § 02 — THE RECORD
+     § 02 — ENGAGEMENT (how I work — above the resume)
      ═══════════════════════════════════════════════════════ -->
 <section>
 <div class="container">
 <div class="section-head reveal">
-<div class="section-meta"><span class="num">§ 02</span>The Record</div>
+<div class="section-meta"><span class="num">§ 02</span>Engagement</div>
+<h2>How I <span class="heavy">work.</span></h2>
+</div>
+<div class="prose">
+<p class="lead reveal reveal-1">I advise founders, CEOs, and operating teams at energy, industrial, and deep-tech companies competing for hyperscaler CAPEX. My work translates AI infrastructure demand into signed offtake, partnership structures, and commercial outcomes.</p>
+<p class="reveal reveal-2"><strong style="color:var(--amber);">Scope</strong> — commercial strategy, GTM build, hyperscaler and utility origination, PPA and energy-as-a-service structuring, partnership architecture, and board or advisory roles.</p>
+<p class="reveal reveal-2"><strong style="color:var(--amber);">Structure</strong> — retainer, project-based, or equity, depending on stage and fit. Available for independent board seats, fractional commercial leadership, and time-bounded engagements.</p>
+<p class="reveal reveal-3"><strong style="color:var(--amber);">Ideal fit</strong> — seed through growth-stage energy and deep-tech companies; established industrial and energy players building hyperscaler-facing commercial functions; investors and operating partners conducting diligence on energy infrastructure deals.</p>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     § 03 — THE RECORD (moved below engagement)
+     ═══════════════════════════════════════════════════════ -->
+<section>
+<div class="container">
+<div class="section-head reveal">
+<div class="section-meta"><span class="num">§ 03</span>The Record</div>
 <h2>What I've <span class="heavy">done.</span></h2>
 </div>
 <div class="portfolio-strip reveal">
@@ -376,24 +394,6 @@ section { padding: 4rem 0; }
 </section>
 
 <!-- ═══════════════════════════════════════════════════════
-     § 03 — ENGAGEMENT (rewritten from Operating Parameters)
-     ═══════════════════════════════════════════════════════ -->
-<section>
-<div class="container">
-<div class="section-head reveal">
-<div class="section-meta"><span class="num">§ 03</span>Engagement</div>
-<h2>How I <span class="heavy">work.</span></h2>
-</div>
-<div class="prose">
-<p class="lead reveal reveal-1">I advise founders, CEOs, and operating teams at energy, industrial, and deep-tech companies competing for hyperscaler CAPEX. My work translates AI infrastructure demand into signed offtake, partnership structures, and commercial outcomes.</p>
-<p class="reveal reveal-2"><strong style="color:var(--amber);">Scope</strong> — commercial strategy, GTM build, hyperscaler and utility origination, PPA and energy-as-a-service structuring, partnership architecture, and board or advisory roles.</p>
-<p class="reveal reveal-2"><strong style="color:var(--amber);">Structure</strong> — retainer, project-based, or equity, depending on stage and fit. Available for independent board seats, fractional commercial leadership, and time-bounded engagements.</p>
-<p class="reveal reveal-3"><strong style="color:var(--amber);">Ideal fit</strong> — seed through growth-stage energy and deep-tech companies; established industrial and energy players building hyperscaler-facing commercial functions; investors and operating partners conducting diligence on energy infrastructure deals.</p>
-</div>
-</div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════
      CLOSING
      ═══════════════════════════════════════════════════════ -->
 <section class="closing">
@@ -429,7 +429,7 @@ section { padding: 4rem 0; }
 </div>
 <script>
 const heroTitle=document.getElementById('hero-title');
-[{text:'Less,',class:''},{text:'better.',class:'line-2'}].forEach((line,li)=>{const s=document.createElement('span');if(line.class)s.className=line.class;line.text.split('').forEach((c,i)=>{const cs=document.createElement('span');cs.className='char';cs.textContent=c===' '?'\u00A0':c;cs.style.animationDelay=`${0.7+li*0.4+i*0.04}s`;s.appendChild(cs)});heroTitle.appendChild(s)});
+[{text:'Energy,',class:''},{text:'commercialized.',class:'line-2'}].forEach((line,li)=>{const s=document.createElement('span');if(line.class)s.className=line.class;line.text.split('').forEach((c,i)=>{const cs=document.createElement('span');cs.className='char';cs.textContent=c===' '?'\u00A0':c;cs.style.animationDelay=`${0.7+li*0.4+i*0.04}s`;s.appendChild(cs)});heroTitle.appendChild(s)});
 const progress=document.getElementById('progress');
 window.addEventListener('scroll',()=>{progress.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100+'%'});
 const reveals=document.querySelectorAll('.reveal');
