@@ -429,7 +429,7 @@ section { padding: 4rem 0; }
 </div>
 <script>
 const heroTitle=document.getElementById('hero-title');
-[{text:'Energy,',class:''},{text:'commercialized.',class:'line-2'}].forEach((line,li)=>{const s=document.createElement('span');if(line.class)s.className=line.class;line.text.split('').forEach((c,i)=>{const cs=document.createElement('span');cs.className='char';cs.textContent=c===' '?'\u00A0':c;cs.style.animationDelay=`${0.7+li*0.4+i*0.04}s`;s.appendChild(cs)});heroTitle.appendChild(s)});
+[{text:'Powering',class:''},{text:'what comes next.',class:'line-2'}].forEach((line,li)=>{const s=document.createElement('span');if(line.class)s.className=line.class;line.text.split('').forEach((c,i)=>{const cs=document.createElement('span');cs.className='char';cs.textContent=c===' '?'\u00A0':c;cs.style.animationDelay=`${0.7+li*0.4+i*0.04}s`;s.appendChild(cs)});heroTitle.appendChild(s)});
 const progress=document.getElementById('progress');
 window.addEventListener('scroll',()=>{progress.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100+'%'});
 const reveals=document.querySelectorAll('.reveal');
