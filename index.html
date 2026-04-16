@@ -31,7 +31,7 @@
 }
 * { margin: 0; padding: 0; box-sizing: border-box; forced-color-adjust: none; -webkit-forced-color-adjust: none; }
 html { scroll-behavior: smooth; color-scheme: dark only; background: #08090b; }
-body { background: #08090b !important; color: #e8e5d9 !important; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.6; font-weight: 400; overflow-x: hidden; -webkit-font-smoothing: antialiased; position: relative; forced-color-adjust: none; }
+body { background: #08090b !important; color: #e8e5d9 !important; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 17px; line-height: 1.65; font-weight: 400; overflow-x: hidden; -webkit-font-smoothing: antialiased; position: relative; forced-color-adjust: none; }
 h1, h2, h3, h4, p, span, li, div, a, ul, section { forced-color-adjust: none !important; }
 h1, h2, h3 { color: #e8e5d9 !important; }
 p { color: #e8e5d9 !important; }
@@ -72,7 +72,7 @@ section { padding: 10rem 0; position: relative; }
 h2 { font-family: 'Fraunces', Georgia, serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: clamp(2.2rem, 5.5vw, 4.2rem); line-height: 1; letter-spacing: -0.03em; font-weight: 300; color: var(--paper); }
 h2 .heavy { font-weight: 600; }
 .prose { max-width: 680px; margin-left: calc(25% + 1rem); }
-.prose p { font-size: 1.08rem; line-height: 1.65; margin-bottom: 1.4rem; color: var(--paper); }
+.prose p { font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.4rem; color: var(--paper); }
 .prose p.lead { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-weight: 300; font-size: 1.5rem; line-height: 1.4; color: var(--paper); margin-bottom: 2rem; }
 .prose .accent { color: var(--amber); font-weight: 500; }
 .ops { display: grid; grid-template-columns: 1fr; gap: 0; border: 1px solid var(--rule-bright); margin-top: 4rem; background: rgba(14, 16, 20, 0.7); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
@@ -96,7 +96,7 @@ h2 .heavy { font-weight: 600; }
 .record-meta .dates { display: block; margin-top: 0.3rem; color: var(--paper-faint); }
 .record-content h3 { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: 1.8rem; font-weight: 400; line-height: 1.2; color: var(--paper); margin-bottom: 0.4rem; letter-spacing: -0.01em; }
 .record-content .org { display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--amber); margin-bottom: 1.5rem; }
-.record-content p { color: var(--paper); opacity: 0.85; font-size: 1rem; line-height: 1.65; max-width: 640px; }
+.record-content p { color: var(--paper); opacity: 0.9; font-size: 1.02rem; line-height: 1.7; max-width: 640px; }
 .record-divider { padding: 2rem 0; border-bottom: 1px solid var(--rule-bright); }
 .record-divider span { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--paper-dim); }
 .portfolio-strip { margin-top: 4rem; margin-bottom: 2rem; }
@@ -106,6 +106,20 @@ h2 .heavy { font-weight: 600; }
 .portfolio-grid a::after { display: none; }
 .portfolio-grid a:hover { background: rgba(212, 160, 90, 0.08); color: var(--amber); }
 @media (max-width: 860px) { .portfolio-grid a { font-size: 1.2rem; padding: 1.2rem 1.8rem; } }
+.testimonials { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 4rem; }
+.testimonial { border: 1px solid var(--rule-bright); padding: 3rem; position: relative; background: rgba(14, 16, 20, 0.5); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); transition: background 0.4s ease; }
+.testimonial:hover { background: rgba(212, 160, 90, 0.03); }
+.testimonial-quote { font-size: 1.05rem; line-height: 1.7; color: var(--paper); opacity: 0.9; margin-bottom: 2rem; }
+.testimonial-quote::before { content: '\201C'; font-family: 'Fraunces', serif; font-size: 3rem; color: var(--amber); opacity: 0.4; position: absolute; top: 1.5rem; left: 1.5rem; line-height: 1; }
+.testimonial-author { display: flex; align-items: center; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+.testimonial-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--amber-deep); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--paper); font-weight: 500; flex-shrink: 0; }
+.testimonial-info .name { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.05rem; color: var(--paper); }
+.testimonial-info .title { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--paper-dim); margin-top: 0.2rem; line-height: 1.4; }
+@media (max-width: 860px) {
+.testimonials { grid-template-columns: 1fr; gap: 1.5rem; }
+.testimonial { padding: 2rem 1.5rem; }
+.testimonial-quote { font-size: 0.95rem; }
+}
 .closing { padding: 14rem 0 10rem; text-align: center; }
 .closing-text { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 0; font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1; font-weight: 300; letter-spacing: -0.03em; color: var(--paper); }
 .closing-text .break { display: block; font-weight: 600; color: var(--amber); margin-top: 0.5rem; }
@@ -387,6 +401,40 @@ section { padding: 4rem 0; }
 <div class="record-meta"><span class="dates"></span></div>
 <div class="record-content">
 <p>Harvard Business School, Executive Education — Leadership &amp; Change Management<br>Rice University, Jones Graduate School of Business — Graduate Certificate, Finance &amp; Accounting<br>The George Washington University — B.A., International Relations (Business &amp; Politics), Cum Laude<br>Pontif&iacute;cia Universidade Cat&oacute;lica do Rio de Janeiro — Portuguese, Economics &amp; International Business</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     § 04 — TESTIMONIALS
+     ═══════════════════════════════════════════════════════ -->
+<section>
+<div class="container">
+<div class="section-head reveal">
+<div class="section-meta"><span class="num">§ 04</span>Testimonials</div>
+<h2>What others <span class="heavy">say.</span></h2>
+</div>
+<div class="testimonials">
+<div class="testimonial reveal reveal-1">
+<p class="testimonial-quote">I have had the pleasure of working with Jon Guidroz over the last 5 years at Microsoft and Google. He is a thoughtful and strategic leader. Jon deeply understands the challenges facing the energy sector, and is passionate about helping organizations in their efforts to accelerate the digitization and decarbonization of the sector. He is a team player. Jon gets things done by leveraging his deep knowledge and understanding of the energy industry, and how to intersect it with the latest technology for maximum impact and value. His relentless focus on driving clarity, on efficient execution, and working with partners and customers truly leads to transformational progress wherever he works.</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar">DW</div>
+<div class="testimonial-info">
+<div class="name">Darryl Willis</div>
+<div class="title">Corporate VP, Energy &amp; Resources &mdash; Microsoft</div>
+</div>
+</div>
+</div>
+<div class="testimonial reveal reveal-2">
+<p class="testimonial-quote">There's a very short list of folks that truly create impact with your professional life &mdash; people that are much more than colleagues. They are collaborators, advisors, partners, and in the best examples true friends. For me, Jon is one of them. He and I accomplished many outcomes together when we were peers. However, our collaboration leading the Schneider Electric and Microsoft innovation alliance demonstrated the true potential of industry partnerships. My endorsement of Jon comes with a lot of professional respect. I'd be delighted to have the opportunity to continue working together wherever his career may take him!</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar">SH</div>
+<div class="testimonial-info">
+<div class="name">Scott Harden</div>
+<div class="title">SVP, Chief Technology Officer &mdash; Schneider Electric</div>
+</div>
 </div>
 </div>
 </div>
